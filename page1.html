@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <title>page1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="js/common/actionList.js"></script>
+    <script type="text/javascript" src="js/common/callScript.js"></script>
+    <script type="text/javascript" src="js/common/defaultScript.js"></script>
+    <script type="text/javascript" src="js/common/soundScript.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js"></script>
+    <script type="text/javascript" src="js/Contents_page1.js"></script>
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet">
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet">
+</head>
+<body oncontextmenu="return false">
+<div id="container" style="background: #f5e48a;">
+    <!-- Background Image Prop Area ------------------------------------------------------------------------------------------------------->
+    <div id="stage"> 
+        <div id="contents" class="flexH flexV flexC" style="position: absolute; width: 100%; height: 100%;">
+            <!-- Contents Image Area  ---------------------------------------------------------------------------------------------------------->
+            <div class="contentsArea flexH flexV">
+                <img src="img/page1/bg.jpg">
+                <img src="img/common/progress6.png" style="position: absolute; top: 20px">
+                <div class="flexH flexV" style="position: absolute; width: 250px; height: 50px; bottom: 5px; justify-content: space-evenly;">
+                    <img id="step0" src="img/page1/progress2.png">
+                    <img id="step1" src="img/page1/progress1.png">
+                    <img id="step2" src="img/page1/progress1.png">
+                    <img id="step3" src="img/page1/progress1.png">
+                </div>
+                <div id="palette" class="flexH flexV" style="position: absolute; top: 520px; left: 390px;">
+                    <img src="img/page1/palette.png">
+                    <div class=" flexH flexV" style="position: absolute; width: 98%; height: 100%; justify-content: space-evenly;">
+                        <img id="pen0" src="img/page1/penSelect0.png">
+                        <img id="pen1" src="img/page1/pen1.png">
+                        <img id="pen2" src="img/page1/pen2.png">
+                        <img id="pen3" src="img/page1/pen3.png">
+                        <img id="pen4" src="img/page1/pen4.png">
+                        <img id="pen5" src="img/page1/pen5.png">
+                        <img id="pen6" src="img/page1/pen6.png">
+                    </div>
+                </div>
+                <img id="completeBtn" src="img/page1/completeBtn.png" style="position: absolute; top: 550px; right: 390px; opacity: 0.4; pointer-events: none;">
+            </div>
+            <div id="canvasPage" class="flex-container" style="width: 100%; height: 100%"></div>
+            <div id="drawArea" class=" flexH flexV" style="position: absolute; top: 125px;">
+                <img id="panel" src="img/page1/panel0.png">
+                <div id="hitObj0" style="position: absolute; width: 50px; height: 50px; left: 300px; background-color: blue; opacity: 0;"></div>    
+                <div id="hitObj1" style="position: absolute; width: 50px; height: 50px; left: 410px; background-color: blue; opacity: 0;"></div>    
+                <div id="hitObj2" style="position: absolute; width: 50px; height: 50px; left: 520px; background-color: blue; opacity: 0;"></div>    
+                <div id="hitObj3" style="position: absolute; width: 50px; height: 50px; left: 620px; background-color: blue; opacity: 0;"></div>    
+            </div>
+            <div id="observer" style="position: absolute; width: 50px; height: 50px; background-color: red; opacity: 0;"></div>
+        </div>
+        <div id="blackMatte"></div>
+        <!-- intro popup -->
+        <div id="introPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/page1/title_write.png" style="position: absolute; top: 130px;">
+            <img id="introPlay" data-seq="13" data-fps="25" src="img/page1/introCheck_1.png" style="position: absolute; bottom: 0px;">
+        </div>
+        <!-- ending popup -->
+        <div id="endingPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/common/endingMiddleStage.png" style="position: absolute; bottom: 50px;">
+            <img id="endingFinale" data-seq="14" data-fps="25" src="img/page1/endingFinale_1.png" style="position: absolute; top: 50px;">
+            <div class="flexH" style="width: 400px; justify-content: space-around; position: absolute; bottom: 90px;">
+                <div id="btnReplay" data-btntype="ui"><img src="img/common/btnReplay.png"></div>
+                <div id="btnHome" data-btntype="ui"><img src="img/common/btnHome.png"></div>
+            </div>
+        </div>        
+        <!-- UI Image Area ---------------------------------------------------------------------------------------------------------------->
+        <img id="btnBack" src="img/common/btn_back.png"  class="btn-ui-action" data-btntype="ui" style="position: absolute; left: 10px; top: 10px;">
+    </div>
+</div> 
+</body>
+</html>

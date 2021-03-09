@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <title>page2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="js/common/actionList.js"></script>
+    <script type="text/javascript" src="js/common/callScript.js"></script>
+    <script type="text/javascript" src="js/common/defaultScript.js"></script>
+    <script type="text/javascript" src="js/common/soundScript.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js"></script>
+    <script type="text/javascript" src="js/Contents_page3.js"></script>
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet">
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet">
+    <style>
+        .highlightEffect {
+            animation: highlightEffect 1s infinite;
+        }
+        @keyframes highlightEffect {
+            from, to { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    </style>
+<body oncontextmenu="return false">
+<div id="container" style="background: #f5e48a">
+    <div id="stage" class="flexH flexV">
+        <div id="contents" class="flexH flexV">
+            <!-- Contents Image Area  ---------------------------------------------------------------------------------------------------------->
+            <div class="contentsArea flexH flexV">
+                <img src="img/page3/bg.jpg">
+                <div id="itemDiv">
+                    <img id="char2" src="img/page3/char_ears2.png" style="position: absolute; left: 541px; top: 323px; opacity: 0;">
+                    <img id="char3" src="img/page3/char_nose2.png" style="position: absolute; left: 794px; top: 350px; opacity: 0;">
+                    <img id="char4" src="img/page3/char_mouth2.png" style="position: absolute; left: 769px; top: 500px; opacity: 0;">
+                    <img id="char1" src="img/page3/char_eyes2.png" style="position: absolute; left: 637px; top: 309px; opacity: 0;">
+                </div>
+                <img id="text1" src="img/page3/text_eyes1.png" style="position: absolute; left: 350px; top: 150px; opacity: 0;">
+                <img id="text2" src="img/page3/text_ears1.png" style="position: absolute; right: 350px; top: 150px; opacity: 0;">
+                <img id="text3" src="img/page3/text_nose1.png" style="position: absolute; left: 350px; bottom: 150px; opacity: 0;">
+                <img id="text4" src="img/page3/text_mouth1.png" style="position: absolute; right: 350px; bottom: 150px; opacity: 0;">
+            </div>
+            <img src="img/common/progress3.png" style="position: absolute; top: 20px;">
+        </div>
+        <div id="blackMatte"></div>
+        <!-- intro popup -->
+        <div id="introPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/page3/title_learn.png" style="position: absolute; top: 130px;">
+            <img id="introLearn" data-seq="8" data-fps="25" src="img/page3/introLearn_1.png" style="position: absolute; top: 250px">
+        </div>
+        <!-- ending popup -->
+        <div id="endingPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/common/endingMiddleStage.png" style="position: absolute; bottom: 50px;">
+            <img id="endingOdd" data-seq="12" data-fps="25" src="img/page3/endingOdd_1.png" style="position: absolute; top: 30px;">
+            <div class="flexH" style="width: 400px; justify-content: space-around; position: absolute; bottom: 90px;">
+                <div id="btnReplay" data-btntype="ui"><img src="img/common/btnReplay.png"></div>
+                <div id="btnNext" data-btntype="ui"><img src="img/common/btnNext.png"></div>
+            </div>
+        </div>
+        <!-- UI image area -->
+        <img id="btnBack" src="img/common/btn_back.png"  class="btn-ui-action" data-btntype="ui" style="position: absolute; left: 10px; top: 10px;">
+    </div>
+</div> 
+</body>
+</html>

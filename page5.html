@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+    <title>page5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="js/common/actionList.js"></script>
+    <script type="text/javascript" src="js/common/callScript.js"></script>
+    <script type="text/javascript" src="js/common/defaultScript.js"></script>
+    <script type="text/javascript" src="js/common/soundScript.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js"></script>
+    <script type="text/javascript" src="js/Contents_page5.js"></script>
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet">
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet">
+    <style>
+        .highlightEffect {
+            animation: highlightEffect 1s linear infinite;
+        }
+        @keyframes highlightEffect {
+            from, to { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+<div id="container" style="background: #f5e48a;">
+    <!-- Background Image Prop Area ------------------------------------------------------------------------------------------------------->
+    <div id="stage"> 
+        <div id="contents" class="flexH flexV flexC" style="position: absolute; width: 100%; height: 100%; background-color: rgb(179, 225, 244);">
+            <img src="img/common/progress5.png" style="position: absolute; top: 20px">
+            <!-- Contents Image Area  ---------------------------------------------------------------------------------------------------------->
+            <div id="upperDiv" class="flexH flexV" style="width: 100%; height: 286px; margin-bottom: 30px; margin-top: 30px;">
+                <div id="card0Pic" style="width: 245px; height: 286px;" class="flip-card">
+                    <div class="flip-card-inner" style="width: 100%; height: 100%; position: absolute;">
+                        <div class="flip-card-back">
+                            <img src="img/page5/cardBack.png" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="flip-card-front">
+                            <img src="img/page5/cardPic0.png" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <img id="card0PicSelectObj" src="img/page5/cardSelect.png" style="opacity: 0;">
+                </div>
+                <div id="card0Txt" style="width: 245px; height: 286px;" class="flip-card">
+                    <div class="flip-card-inner" style="width: 100%; height: 100%; position: absolute;">
+                        <div class="flip-card-back">
+                            <img src="img/page5/cardBack.png" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="flip-card-front">
+                            <img src="img/page5/cardTxt0.png" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <img id="card0TxtSelectObj" src="img/page5/cardSelect.png" style="opacity: 0;">
+                </div>
+                <div id="card1Pic" style="width: 245px; height: 286px;" class="flip-card">
+                    <div class="flip-card-inner" style="width: 100%; height: 100%; position: absolute;">
+                        <div class="flip-card-back">
+                            <img src="img/page5/cardBack.png" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="flip-card-front">
+                            <img src="img/page5/cardPic1.png" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <img id="card1PicSelectObj" src="img/page5/cardSelect.png" style="opacity: 0;">
+                </div>
+                <div id="card1Txt" style="width: 245px; height: 286px;" class="flip-card">
+                    <div class="flip-card-inner" style="width: 100%; height: 100%; position: absolute;">
+                        <div class="flip-card-back">
+                            <img src="img/page5/cardBack.png" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="flip-card-front">
+                            <img src="img/page5/cardTxt1.png" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <img id="card1TxtSelectObj" src="img/page5/cardSelect.png" style="opacity: 0;">
+                </div>
+            </div>
+            <div id="lowerDiv" class="flexH flexV" style="width: 100%; height: 286px; margin-bottom: 30px;">
+                <div id="card2Pic" style="width: 245px; height: 286px;" class="flip-card">
+                    <div class="flip-card-inner" style="width: 100%; height: 100%; position: absolute;">
+                        <div class="flip-card-back">
+                            <img src="img/page5/cardBack.png" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="flip-card-front">
+                            <img src="img/page5/cardPic2.png" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <img id="card2PicSelectObj" src="img/page5/cardSelect.png" style="opacity: 0;">
+                </div>
+                <div id="card2Txt" style="width: 245px; height: 286px;" class="flip-card">
+                    <div class="flip-card-inner" style="width: 100%; height: 100%; position: absolute;">
+                        <div class="flip-card-back">
+                            <img src="img/page5/cardBack.png" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="flip-card-front">
+                            <img src="img/page5/cardTxt2.png" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <img id="card2TxtSelectObj" src="img/page5/cardSelect.png" style="opacity: 0;">
+                </div>
+                <div id="card3Pic" style="width: 245px; height: 286px;" class="flip-card">
+                    <div class="flip-card-inner" style="width: 100%; height: 100%; position: absolute;">
+                        <div class="flip-card-back">
+                            <img src="img/page5/cardBack.png" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="flip-card-front">
+                            <img src="img/page5/cardPic3.png" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <img id="card3PicSelectObj" src="img/page5/cardSelect.png" style="opacity: 0;">
+                </div>
+                <div id="card3Txt" style="width: 245px; height: 286px;" class="flip-card">
+                    <div class="flip-card-inner" style="width: 100%; height: 100%; position: absolute;">
+                        <div class="flip-card-back">
+                            <img src="img/page5/cardBack.png" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="flip-card-front">
+                            <img src="img/page5/cardTxt3.png" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <img id="card3TxtSelectObj" src="img/page5/cardSelect.png" style="opacity: 0;">
+                </div>
+            </div>
+            <div class="flexH flexV" style="position: absolute; bottom: 15px; width: 70px; justify-content: space-between;">
+                <img id="step1" src="img/page5/progress2.png">
+                <img id="step2" src="img/page5/progress1.png">
+            </div>
+        </div>
+        <div id="blackMatte"></div>
+        <!-- intro popup -->
+        <div id="introPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/page5/title_practice.png" style="position: absolute; top: 130px;">
+            <img id="introPractice" data-seq="14" data-fps="25" src="img/page5/introPractice_1.png" style="position: absolute; bottom: 0px;">
+        </div>
+        <!-- ending popup -->
+        <div id="endingPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/common/endingMiddleStage.png" style="position: absolute; bottom: 50px;">
+            <img id="endingOdd" data-seq="12" data-fps="25" src="img/page5/endingOdd_1.png" style="position: absolute; top: 30px;">
+            <div class="flexH" style="width: 400px; justify-content: space-around; position: absolute; bottom: 90px;">
+                <div id="btnReplay" data-btntype="ui"><img src="img/common/btnReplay.png"></div>
+                <div id="btnNext" data-btntype="ui"><img src="img/common/btnNext.png"></div>
+            </div>
+        </div>        
+        <!-- UI Image Area ---------------------------------------------------------------------------------------------------------------->
+        <img id="btnBack" src="img/common/btn_back.png"  class="btn-ui-action" data-btntype="ui" style="position: absolute; left: 10px; top: 10px;">
+    </div>
+</div> 
+</body>
+</html>

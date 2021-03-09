@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>page2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="js/common/actionList.js"></script>
+    <script type="text/javascript" src="js/common/callScript.js"></script>
+    <script type="text/javascript" src="js/common/defaultScript.js"></script>
+    <script type="text/javascript" src="js/common/soundScript.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js" ></script>
+    <script type="text/javascript" src="js/Contents_ebook_03.js" ></script>
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet">
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet">
+    <style>
+        .charBounce {
+            animation: charBounce 1s linear infinite;
+            transform-origin: center bottom;
+        }
+        @keyframes charBounce {
+            from, to { transform: scaleY(1.0); }
+            50% { transform: scaleY(1.01); }
+        }
+        .highlightEffect {
+            animation: highlightEffect 1s linear infinite;
+        }
+        @keyframes highlightEffect {
+            from, to { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+<div id="container" style="background-color: #f5e48a;">
+    <div id="stage" class="flexH flexV">
+        <div id="contents" class="flexH flexV">
+            <!-- Contents Image Area  ---------------------------------------------------------------------------------------------------------->
+            <img src="img/common/progress2.png" style="position: absolute; top: 20px;">
+            <img src="img/ebook_03/bg.jpg">
+            <div class="contentsArea">
+                <img id="char0" src="img/ebook_03/char0_1.png" style="position: absolute; right: 394px; bottom: 100px;" data-fps="100" data-seq="2">
+                <img  src="img/ebook_03/sub_p07_1.png" style="position: absolute; left: 330px; top: 80px;">
+                <img  src="img/ebook_03/sub_p07_2.png" style="position: absolute; left: 330px; top: 140px;">
+                <div id="char1Div" class="flexH flexV" style="position: absolute; width: 435px; height: 532px; left: 352px; bottom: 47px;">
+                    <img id="char1" src="img/ebook_03/char_p7_2_1.png" style="position: absolute;">
+                    <img id="char1SelectObj" class="highlightEffect" src="img/ebook_03/char_p7_2_2.png" style="position: absolute; display: none;">
+                </div>
+            </div>
+        </div>
+        <!-- UI Image Area ---------------------------------------------------------------------------------------------------------------->
+        <img id="btnBack" src="img/common/btn_back.png"  class="btn-ui-action" data-btntype="ui" style="position: absolute; left: 10px; top: 10px;">
+        <img id="btnNext" src="img/common/ebook_btnNext.png"  class="btn-ui-action" data-btntype="ui" style="position: absolute; right: 10px; bottom: 10px;">
+        <img id="btnPrev" src="img/common/ebook_btnPrev.png"  class="btn-ui-action" data-btntype="ui" style="position: absolute; left: 10px; bottom: 10px;">
+    </div>
+</div>
+</body>
+</html>

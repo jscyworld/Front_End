@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+    <title>jls</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="js/common/actionList.js"></script>
+    <script type="text/javascript" src="js/common/callScript.js"></script>
+    <script type="text/javascript" src="js/common/defaultScript.js"></script>
+    <script type="text/javascript" src="js/common/soundScript.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js"></script>
+    <script type="text/javascript" src="js/Contents_index.js"></script> 
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet">
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet">
+    <style>
+        .contentsArea {
+            position: absolute;
+            width: 1674px;
+            height: 768px;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+<div id="container" style="background-color: #f5e48a;">
+    <div id="stage"> 
+        <div id="contents" class="flexH flexV">
+            <img src="img/index/bg_content.png">
+            <img src="img/index/main_title01.png" style="position: absolute; top: 40px;">
+            <div class="contentsArea">
+                <div id="page1" data-btntype="ui" style="position: absolute; left: 360px; top: 90px; width: 240px; height: 193px;">
+                    <img src="img/index/thumbnail1.png" style="position: absolute; left: 13px; top: 12px;">
+                    <img src="img/index/frame.png" style="position: absolute; left: 0px; top: 0px;">
+                    <img src="img/index/title_write.png" style="position: absolute; left: 10px; top: 150px;">
+                    <img id="page1Complete" src="img/index/star_dim.png" style="position: absolute; right: 15px; top: 15px;">
+                </div>
+                <div id="page2" data-btntype="ui" style="position: absolute; left: 715px; top: 120px; width: 240px; height: 193px;">
+                    <img src="img/index/thumbnail2.png" style="position: absolute; left: 10px; top: 10px;">
+                    <img src="img/index/frame.png" style="position: absolute; left: 0px; top: 0px;">
+                    <img src="img/index/title_ebook.png" style="position: absolute; left: 10px; top: 150px;">
+                    <img id="page2Complete" src="img/index/star_dim.png" style="position: absolute; right: 15px; top: 15px;">
+                </div>
+                <div id="page3" data-btntype="ui" style="position: absolute; right: 360px; top: 90px; width: 240px; height: 193px;">
+                    <img src="img/index/thumbnail3.png" style="position: absolute; right: 10px; top: 10px;">
+                    <img src="img/index/frame.png" style="position: absolute; right: 0px; top: 0px;">
+                    <img src="img/index/title_learn.png" style="position: absolute; right: 15px; top: 150px;">
+                    <img id="page3Complete" src="img/index/star_dim.png" style="position: absolute; right: 15px; top: 15px;">
+                </div>
+                <div id="page4" data-btntype="ui" style="position: absolute; left: 360px; top: 420px; width: 240px; height: 193px;">
+                    <img src="img/index/thumbnail4.png" style="position: absolute; left: 10px; top: 10px;">
+                    <img src="img/index/frame.png" style="position: absolute; left: 0px; top: 0px;">
+                    <img src="img/index/title_check.png" style="position: absolute; left: 10px; top: 145px;">
+                    <img id="page4Complete" src="img/index/star_dim.png" style="position: absolute; right: 15px; top: 15px;">
+                </div>
+                <div id="page5" data-btntype="ui" style="position: absolute; left: 715px; top: 400px; width: 240px; height: 193px;">
+                    <img src="img/index/thumbnail5.png" style="position: absolute; left: 10px; top: 10px;">
+                    <img src="img/index/frame.png" style="position: absolute; left: 0px; top: 0px;">
+                    <img src="img/index/title_practice.png" style="position: absolute; left: 10px; top: 145px;">
+                    <img id="page5Complete" src="img/index/star_dim.png" style="position: absolute; right: 15px; top: 15px;">
+                </div>
+                <div id="page6" data-btntype="ui" style="position: absolute; right: 360px; top: 420px; width: 240px; height: 193px;">
+                    <img src="img/index/thumbnail6.png" style="position: absolute; right: 10px; top: 10px;">
+                    <img src="img/index/frame.png" style="position: absolute; right: 0px; top: 0px;">
+                    <img src="img/index/title_play.png" style="position: absolute; right: 15px; top: 150px;">
+                    <img id="page6Complete" src="img/index/star_dim.png" style="position: absolute; right: 15px; top: 15px;">
+                </div>
+            </div>
+            <img id="btnStart" data-btntype="ui" src="img/index/btnStart_1.png" style="position: absolute; bottom: 10px;">
+            <div class="flexH flexV" style="position: absolute; width: 1662px;">
+                <img id="doorLeft" src="img/index/jlskke_door_l.png"  style="position: absolute; left: 0px;">
+                <img id="doorRight" src="img/index/jlskke_door_r.png" style="position: absolute; right: 0px;">
+                <img id="jlsLogo" src="img/index/logo_jlskke.png" style="position: absolute;">
+            </div>
+        </div>
+        <!-- UI Image Area ---------------------------------------------------------------------------------------------------------------->
+        <div id="ui" style="position: absolute;">
+            <img id="btnBack" src="img/common/btn_back.png" class="btn-ui-action" data-btntype="ui" style="margin-left: 10px; margin-top: 10px">  
+        </div>
+    </div>
+</div>
+</body>
+</html>

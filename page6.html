@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <title>page6</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="js/common/actionList.js"></script>
+    <script type="text/javascript" src="js/common/callScript.js"></script>
+    <script type="text/javascript" src="js/common/defaultScript.js"></script>
+    <script type="text/javascript" src="js/common/soundScript.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js"></script>
+    <script type="text/javascript" src="js/Contents_page6.js"></script>
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet">
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet">
+    <style>
+        .highlightEffect {
+            animation: highlightEffect 1s linear infinite;
+        }
+        @keyframes highlightEffect {
+            from, to { opacity: 0; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+<div id="container" style="background: #f5e48a;">
+    <!-- Background Image Prop Area ------------------------------------------------------------------------------------------------------->
+    <div id="stage"> 
+        <div id="contents" class="flexH flexV flexC" style="position: absolute; width: 100%; height: 100%; background-color: rgb(246, 195, 208);">
+            <img src="img/common/progress6.png" style="position: absolute; top: 20px">
+            <!-- Contents Image Area  ---------------------------------------------------------------------------------------------------------->
+            <div id="card" class="flip-card" data-btntype="flip-card" style="width:245px; height:286px; opacity: 0;">
+                <div class="flip-card-inner" style="width: 100%; height:100%">
+                    <div class="flip-card-back">
+                        <img src="img/page6/cardBack.png" style="width: 100%; height:100%">
+                    </div>
+                    <div class="flip-card-front">
+                        <img src="img/page6/card_1.png" style="width: 100%; height:100%">
+                    </div>
+                </div>
+            </div>
+
+            <div class="flexH flexV" style="position: absolute; bottom: 15px; width: 150px; justify-content: space-between;">
+                <img id="step1" src="img/page6/progress2.png">
+                <img id="step2" src="img/page6/progress1.png">
+                <img id="step3" src="img/page6/progress1.png">
+            </div>
+        </div>
+        <div id="blackMatte"></div>
+        <!-- intro popup -->
+        <div id="introPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/page6/title_play.png" style="position: absolute; top: 130px;">
+            <img id="introPlay" data-seq="7" data-fps="25" src="img/page6/introPlay_1.png" style="position: absolute; bottom: 0px;">
+        </div>
+        <!-- ending popup -->
+        <div id="endingPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/common/endingMiddleStage.png" style="position: absolute; bottom: 50px;">
+            <img id="endingFinale" data-seq="14" data-fps="25" src="img/page6/endingFinale_1.png" style="position: absolute; top: 50px;">
+            <div class="flexH" style="width: 400px; justify-content: space-around; position: absolute; bottom: 90px;">
+                <div id="btnReplay" data-btntype="ui"><img src="img/common/btnReplay.png"></div>
+                <div id="btnHome" data-btntype="ui"><img src="img/common/btnHome.png"></div>
+            </div>
+        </div>        
+        <!-- UI Image Area ---------------------------------------------------------------------------------------------------------------->
+        <img id="btnBack" src="img/common/btn_back.png"  class="btn-ui-action" data-btntype="ui" style="position: absolute; left: 10px; top: 10px;">
+    </div>
+</div> 
+</body>
+</html>

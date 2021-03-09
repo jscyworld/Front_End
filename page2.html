@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>page2</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no">
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="js/common/actionList.js"></script>
+    <script type="text/javascript" src="js/common/callScript.js"></script>
+    <script type="text/javascript" src="js/common/defaultScript.js"></script>
+    <script type="text/javascript" src="js/common/soundScript.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js"></script>
+    <script type="text/javascript" src="js/Contents_page2.js"></script>
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet">
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet">
+    <style>
+        .btnStartBounce {
+            animation: btnStartBounce 1s infinite linear ;
+        }
+        @keyframes btnStartBounce {
+            from, to { transform: scale(0.95); }
+            50% { transform: scale(1.0); }
+        }
+    </style>
+</head>
+<body oncontextmenu="return false">
+<div id="container" style="background-color: #f5e48a;">
+    <div id="stage" class="flexH flexV">
+        <div id="contents" class="flexH flexV">
+            <!-- Contents Image Area  ---------------------------------------------------------------------------------------------------------->
+            <img src="img/common/progress2.png" style="position: absolute; top: 20px;">
+            <img src="img/page2/bg_p0.jpg">
+            <img id="coverMotion" data-seq="3" data-fps="50" src="img/page2/coverMotion_1.png" style="position: absolute; top: 20px;">
+            <img id="btnStart" data-btntype="ui" src="img/page2/button_start_01.png" style="position: absolute; bottom: 50px;">
+        </div>
+        <!-- ending popup -->
+        <div id="blackMatte"></div>
+        <div id="introPopup" class="flexH flexV flexC" style="width: 100%; height: 100%; display: none;">
+            <img src="img/page2/title_book.png" style="position: absolute; top: 130px;">
+            <img id="introBook" data-seq="13" data-fps="25" src="img/page2/introBook_1.png" style="position: absolute; top: 250px">
+        </div>
+        <!-- UI Image Area ---------------------------------------------------------------------------------------------------------------->
+        <img id="btnBack" src="img/common/btn_back.png"  class="btn-ui-action" data-btntype="ui" style="position: absolute; left: 10px; top: 10px;">
+    </div>
+</div>
+</body>
+</html>
