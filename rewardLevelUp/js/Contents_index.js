@@ -1,9 +1,9 @@
 // JavaScript Document
 "use strict";
 var contentsMgr = ContentsMgr.getInstance();
-var soundMgr = KYC_SoundMgr.getInstance();
-var callMgr = KYC_CallMgr.getInstance();
-var defaultMgr = KYC_DefaultMgr.getInstance();
+var soundMgr = js_soundMgr.getInstance();
+var callMgr = js_callMgr.getInstance();
+var defaultMgr = js_defaultMgr.getInstance();
 
 var pageVar = {
         totalPage: 1,

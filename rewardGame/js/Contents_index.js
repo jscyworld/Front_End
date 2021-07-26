@@ -1,9 +1,9 @@
 // JavaScript Document
 "use strict";
 var contentsMgr = ContentsMgr.getInstance();
-var soundMgr = KYC_SoundMgr.getInstance();
-var callMgr = KYC_CallMgr.getInstance();
-var defaultMgr = KYC_DefaultMgr.getInstance();
+var soundMgr = js_soundMgr.getInstance();
+var callMgr = js_callMgr.getInstance();
+var defaultMgr = js_defaultMgr.getInstance();
 
 var pageVar = {
         totalPage: 1,
@@ -41,7 +41,7 @@ window.onload = function () {
     // setInteraction();
     contentsMgr.soundPlayer("bgm", "bgm.mp3");
     pageVar.account_token = getParam("account_token") || "offline";
-    document.getElementById("gameCount").innerText = `${getParam("game_cnt") || 0}`;
+    document.getElementById("gameCount").innerText = `${getParam("game_cnt") || 20}`;
     if ($("#contents").width() > 1280) $("#char0").css({ width: "", height: "", transform: "scale(0.8)", bottom: -40, right: "-100%" });
 };
 

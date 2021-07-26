@@ -1,4 +1,4 @@
-var KYC_DefaultMgr = (function () {
+var js_defaultMgr = (() => {
     "use strict";
 
     var instance;
@@ -15,7 +15,7 @@ var KYC_DefaultMgr = (function () {
 
         function onload() {
             if (isApplication() == true) {
-                callMgr.sendActionNameWithParameter(KYC_ActionList.KYC_SendAppData, null);
+                callMgr.sendActionNameWithParameter(actionList.sendAppData, null);
             } else {
                 isAvailableDomain();
             }
@@ -28,8 +28,7 @@ var KYC_DefaultMgr = (function () {
         };
 
         function isAvailableApplicationKey() {
-            if (appData.privatekey == "f3ZjUn4X3meucHHrF5yb6wfgBzNYCAkK") return true;
-
+            if (appData.privatekey == "") return true;
             return false;
         }
 

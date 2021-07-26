@@ -343,10 +343,8 @@ var ContentsMgr = (function () {
                 var pt = localToGlobal(targetElement);
                 pt = globalToLocal(currentElement, pt);
                 if (!returnValue) {
-                    if (direction == "x" || direction == "xy")
-                        currentElement.style.left = (targetElement.offsetWidth - currentElement.offsetWidth) / 2 + pt.x + "px";
-                    if (direction == "y" || direction == "xy")
-                        currentElement.style.top = (targetElement.offsetHeight - currentElement.offsetHeight) / 2 + pt.y + "px";
+                    if (direction == "x" || direction == "xy") currentElement.style.left = (targetElement.offsetWidth - currentElement.offsetWidth) / 2 + pt.x + "px";
+                    if (direction == "y" || direction == "xy") currentElement.style.top = (targetElement.offsetHeight - currentElement.offsetHeight) / 2 + pt.y + "px";
                 } else {
                     return {
                         x: (targetElement.offsetWidth - currentElement.offsetWidth) / 2 + pt.x,

@@ -1,4 +1,4 @@
-var KYC_CallMgr = (function () {
+var js_callMgr = (() => {
     "use strict";
 
     var instance;
@@ -7,8 +7,8 @@ var KYC_CallMgr = (function () {
         function privateMethod() {
             console.log("private");
         }
-        var kyc_defaultMgr = KYC_DefaultMgr.getInstance();
-        var privateKey = "f3ZjUn4X3meucHHrF5yb6wfgBzNYCAkK";
+        var defaultMgr = js_defaultMgr.getInstance();
+        var privateKey = "";
         var platformType = undefined;
         var ua = navigator.userAgent;
         var checker = {
@@ -23,16 +23,16 @@ var KYC_CallMgr = (function () {
             platformType = "unknown";
         }
 
-        function KYC_ActionCompletionHandler(filename, resultMsg, resultObject /*nullable*/, actionname) {
+        function js_actionCompletionHandler(filename, resultMsg, resultObject /*nullable*/, actionname) {
             console.log("filename " + filename + " resultMsg " + resultMsg + " actionname " + actionname);
-            if (actionname == KYC_ActionList.KYC_RequestContentsDB) {
+            if (actionname == js_actionList.requestContentsDB) {
                 var temp = JSON.parse(resultObject);
                 console.log(temp);
                 // console.log(resultObject + ": " + typeof(resultObject))
                 window.localStorage.setItem("loadedJSON", resultObject);
             }
         }
-        window.KYC_ActionCompletionHandler = KYC_ActionCompletionHandler;
+        window.js_actionCompletionHandler = js_actionCompletionHandler;
 
         function sendJSON(jsonString) {
             if (platformType.match("iOS")) {
@@ -135,13 +135,13 @@ var KYC_CallMgr = (function () {
             var stringJSON = JSON.stringify(dictionary);
 
             //datastore
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 try {
                     window.localStorage.setItem(filename, sjcl.encrypt(privateKey, stringJSON));
-                    window.KYC_ActionCompletionHandler(filename, KYC_ActionResultList.KYC_Success, null, KYC_ActionList.KYC_WriteToFile);
+                    window.js_actionCompletionHandler(filename, js_actionResultList.js_success, null, js_actionList.js_writeToFile);
                 } catch (e) {
                     //if disable cookie you can not use
-                    window.KYC_ActionCompletionHandler(filename, KYC_ActionResultList.KYC_Fail, null, KYC_ActionList.KYC_WriteToFile);
+                    window.js_actionCompletionHandler(filename, js_actionResultList.js_fail, null, js_actionList.js_writeToFile);
                     return;
                 }
             } else {
@@ -149,13 +149,13 @@ var KYC_CallMgr = (function () {
                 parameter.filename = filename;
                 parameter.json = stringJSON;
 
-                this.sendActionNameWithParameter(KYC_ActionList.KYC_WriteToFile, parameter);
+                this.sendActionNameWithParameter(js_actionList.js_writeToFile, parameter);
                 parameter = null;
             }
         }
 
         function readFromFile(filename) {
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 try {
                     var jsonString = window.localStorage.getItem(filename);
                     var jsonObject = null;
@@ -163,37 +163,36 @@ var KYC_CallMgr = (function () {
                         jsonObject = JSON.parse(sjcl.decrypt(privateKey, jsonString));
                     }
 
-                    if (jsonString == null || jsonObject == null)
-                        window.KYC_ActionCompletionHandler(filename, KYC_ActionResultList.KYC_Fail, null, KYC_ActionList.KYC_ReadFromFile);
-                    else window.KYC_ActionCompletionHandler(filename, KYC_ActionResultList.KYC_Success, jsonObject, KYC_ActionList.KYC_ReadFromFile);
+                    if (jsonString == null || jsonObject == null) window.js_actionCompletionHandler(filename, js_actionResultList.js_fail, null, js_actionList.js_readFromFile);
+                    else window.js_actionCompletionHandler(filename, js_actionResultList.js_success, jsonObject, js_actionList.js_readFromFile);
                 } catch (e) {
                     //if disable cookie you can not use
-                    window.KYC_ActionCompletionHandler(filename, KYC_ActionResultList.KYC_Fail, null, KYC_ActionList.KYC_ReadFromFile);
+                    window.js_actionCompletionHandler(filename, js_actionResultList.js_fail, null, js_actionList.js_readFromFile);
                     return;
                 }
             } else {
                 var parameter = new Object();
                 parameter.filename = filename;
 
-                this.sendActionNameWithParameter(KYC_ActionList.KYC_ReadFromFile, parameter);
+                this.sendActionNameWithParameter(js_actionList.js_readFromFile, parameter);
                 parameter = null;
             }
         }
 
         function removeFile(filename) {
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 try {
                     window.localStorage.removeItem(filename);
-                    window.KYC_ActionCompletionHandler(filename, KYC_ActionResultList.KYC_Success, null, KYC_ActionList.KYC_RemoveFile);
+                    window.js_actionCompletionHandler(filename, js_actionResultList.js_success, null, js_actionList.js_removeFile);
                 } catch (e) {
                     //if disable cookie you can not use
-                    window.KYC_ActionCompletionHandler(filename, KYC_ActionResultList.KYC_Fail, null, KYC_ActionList.KYC_RemoveFile);
+                    window.js_actionCompletionHandler(filename, js_actionResultList.js_fail, null, js_actionList.js_removeFile);
                     return;
                 }
             } else {
                 var parameter = new Object();
                 parameter.filename = filename;
-                this.sendActionNameWithParameter(KYC_ActionList.KYC_RemoveFile, parameter);
+                this.sendActionNameWithParameter(js_actionList.js_removeFile, parameter);
                 parameter = null;
             }
         }

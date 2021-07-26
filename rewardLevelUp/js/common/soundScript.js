@@ -1,4 +1,4 @@
-var KYC_SoundMgr = (function () {
+var js_soundMgr = (() => {
     "use strict";
 
     // Instance stores a reference to the Singleton
@@ -11,8 +11,8 @@ var KYC_SoundMgr = (function () {
         function privateMethod() {
             console.log("private");
         }
-        var kyc_defaultMgr = KYC_DefaultMgr.getInstance();
-        var kyc_callMgr = KYC_CallMgr.getInstance();
+        var defaultMgr = js_defaultMgr.getInstance();
+        var callMgr = js_callMgr.getInstance();
         // var contentsMgr = ContentsMgr.getInstance();
         var bgmPlayer;
         var playerMap = new Map();
@@ -21,7 +21,7 @@ var KYC_SoundMgr = (function () {
         var duplicatePlayerKeyArray = new Array();
 
         function playBackGroundSound(path) {
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 if (bgmPlayer != null) {
                     bgmPlayer.pause();
                     bgmPlayer.currentTime = 0;
@@ -47,13 +47,13 @@ var KYC_SoundMgr = (function () {
                 parameter.useAutoPage = soundVar.useAutoPage;
                 parameter.autoPageNumber = soundVar.autoPageNumber;
                 parameter.autoPageDuration = soundVar.autoPageDuration;
-                kyc_callMgr.sendActionNameWithParameter(KYC_ActionList.KYC_PlayBackGroundSound, parameter);
+                callMgr.sendActionNameWithParameter(js_actionList.js_playBackGroundSound, parameter);
                 parameter = null;
             }
         }
 
         function resumeBackGroundSound(path) {
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 if (bgmPlayer != null) {
                     var promise = bgmPlayer.play();
                     if (typeof promise !== "undefined") {
@@ -67,13 +67,13 @@ var KYC_SoundMgr = (function () {
             } else {
                 var parameter = new Object();
                 parameter.path = path;
-                kyc_callMgr.sendActionNameWithParameter(KYC_ActionList.KYC_PlayBackGroundSound, parameter);
+                callMgr.sendActionNameWithParameter(js_actionList.js_playBackGroundSound, parameter);
                 parameter = null;
             }
         }
 
         function stopBackGroundSound() {
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 if (bgmPlayer != null) {
                     bgmPlayer.pause();
                     bgmPlayer.currentTime = 0;
@@ -81,13 +81,13 @@ var KYC_SoundMgr = (function () {
                 }
             } else {
                 var parameter = new Object();
-                kyc_callMgr.sendActionNameWithParameter(KYC_ActionList.KYC_StopBackGroundSound, parameter);
+                callMgr.sendActionNameWithParameter(js_actionList.js_stopBackGroundSound, parameter);
                 parameter = null;
             }
         }
 
         function playSound(path) {
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 var player = playerMap.get(path);
                 var promise;
                 if (player != null) {
@@ -134,13 +134,13 @@ var KYC_SoundMgr = (function () {
             } else {
                 var parameter = new Object();
                 parameter.path = path;
-                kyc_callMgr.sendActionNameWithParameter(KYC_ActionList.KYC_PlaySound, parameter);
+                callMgr.sendActionNameWithParameter(js_actionList.js_playSound, parameter);
                 parameter = null;
             }
         }
 
         function stopSound(path) {
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 var player = playerMap.get(path);
                 if (player != null) {
                     player.pause();
@@ -171,13 +171,13 @@ var KYC_SoundMgr = (function () {
             } else {
                 var parameter = new Object();
                 parameter.path = path;
-                kyc_callMgr.sendActionNameWithParameter(KYC_ActionList.KYC_StopSound, parameter);
+                callMgr.sendActionNameWithParameter(js_actionList.js_stopSound, parameter);
                 parameter = null;
             }
         }
 
         function stopAllSound() {
-            if (kyc_defaultMgr.isApplication() == false) {
+            if (defaultMgr.isApplication() == false) {
                 //for(var player of playerMap.values())
                 for (var key in playerKeyArray) {
                     var path = playerKeyArray[key];
@@ -206,7 +206,7 @@ var KYC_SoundMgr = (function () {
                 duplicatePlayerMap.clear();
                 duplicatePlayerKeyArray.length = 0;
             } else {
-                kyc_callMgr.sendActionNameWithParameter(KYC_ActionList.KYC_StopAllSound, null);
+                callMgr.sendActionNameWithParameter(js_actionList.js_stopAllSound, null);
             }
         }
 
