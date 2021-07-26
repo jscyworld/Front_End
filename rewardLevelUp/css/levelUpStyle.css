@@ -1,0 +1,130 @@
+.shinePanning {
+    animation: shinePanning 1s linear infinite;
+}
+@keyframes shinePanning {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+.star {
+    animation: star 0.15s ease-in forwards;
+}
+@keyframes star {
+    from {
+        transform: scale(15);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.levelUpMileage {
+    width: 180px;
+    height: 49px;
+    text-align: left;
+    font: normal normal normal 56px/56px KAKAOFRIENDS;
+    letter-spacing: 0px;
+    color: #ffe34a;
+    opacity: 1;
+}
+
+.myMileageBox {
+    position: absolute;
+    top: 262px;
+    left: 1756px;
+    width: 555px;
+    height: 266px;
+    border-radius: 30px;
+}
+
+.myMileageTxt {
+    position: absolute;
+    top: 105px;
+    left: 160px;
+    width: 392px;
+    height: 101px;
+    text-align: left;
+    font: normal normal normal 96px/163px KAKAOFRIENDS;
+    letter-spacing: 0px;
+    color: #ffe34a;
+    opacity: 1;
+}
+
+.boxBounce {
+    animation: boxBounce 1s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+}
+@keyframes boxBounce {
+    from,
+    to {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.1);
+        filter: brightness(1.4);
+    }
+}
+
+.boxBounceScale {
+    animation: boxBounceScale 1s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+}
+@keyframes boxBounceScale {
+    from,
+    to {
+        transform: scale(3);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(3.3);
+        filter: brightness(1.4);
+    }
+}
+
+.scaleUp {
+    animation: scaleUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.charBounce {
+    animation: charBounce 1s linear infinite;
+}
+@keyframes charBounce {
+    from,
+    to {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(0, -20px);
+    }
+}
+
+.mileageMotion {
+    animation: mileageMotion 1s linear forwards;
+}
+@keyframes mileageMotion {
+    from {
+        transform: translate(0, 30px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(0, 0px);
+        opacity: 1;
+    }
+    to {
+        transform: translate(0, -30px);
+        opacity: 0;
+    }
+}

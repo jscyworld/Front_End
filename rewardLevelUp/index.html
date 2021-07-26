@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>rewardLevelUp</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no" />
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/common/KYC_ActionList.js"></script>
+    <script type="text/javascript" src="js/common/KYC_CallScript.js"></script>
+    <script type="text/javascript" src="js/common/KYC_DefaultScript.js"></script>
+    <script type="text/javascript" src="js/common/KYC_SoundScript.js"></script>
+    <script type="text/javascript" src="js/common/lottie.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js"></script>
+    <script type="text/javascript" src="js/Contents_index.js"></script>
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet" />
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet" />
+    <link href="css/levelUpStyle.css" type="text/css" rel="stylesheet" />
+    <style>
+        .contentsArea {
+            position: absolute;
+            width: 1674px;
+            height: 768px;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false" style="background: black;">
+    <div id="container" class="top-layer">
+        <div id="stage">
+            <div id="contents" class="flexH flexV">
+                <div class="contentsArea flexH flexV">
+                    <img id="star0" src="img/index/star0.png" style="position: absolute; top: 30px; left: 740px; display: none;">
+                    <img id="star1" src="img/index/star1.png" style="position: absolute; top: 23px; display: none;">
+                    <img id="star2" src="img/index/star2.png" style="position: absolute; top: 30px; right: 740px; display: none;">
+                    <img id="txtLevelUp" src="img/index/txtLevelUp.png"
+                        style="position: absolute; top: 68px; left: 627px; transform-origin: left; transform: rotate(2deg); opacity: 0;">
+                    <img id="newChar" src="img/index/newChar.png" style="position: absolute; top: 620px; opacity: 0;">
+                    <div id="levelUpMileageDiv" class="flexH flexV"
+                        style="position: absolute; width: 230px; height: 60px; top: 170px; justify-content: space-evenly; display: none;">
+                        <img src="img/index/iconPlus.png">
+                        <span id="levelUpMileage" class="levelUpMileage"></span>
+                    </div>
+                    <div id="myMileageBox" class="myMileageBox flexH flexV">
+                        <img src="img/index/myStarMileage.png" style="position: absolute; top: 50px;">
+                        <img src="img/index/mileageIcon_big.png" style="position: absolute; top: 140px; left: 40px;">
+                        <div id="myMileageTxt" class="myMileageTxt">0</div>
+                    </div>
+                    <div id="boxDiv" class="flexH flexV" style="position: absolute; top: 250px;">
+                        <img src="img/index/boxBg.png" style="opacity: 0;" />
+                    </div>
+                    <img id="boxStar" data-seq="2" data-fps="100" src="img/index/boxStar_1.png" style="position: absolute; top: 250px; display: none;" />
+                    <div id="treasure" style="position: absolute; display: none;"></div>
+                    <div id="charDiv" class="flexH flexV" style="position: absolute; top: 90px; display: none;">
+                        <img src="img/index/charBg.png" class="shinePanning">
+                        <div id="char" class="flexH flexV" style="position: absolute;">
+                            <img src="img/index/char.png">
+                            <img src="img/index/charStar.png" style="position: absolute;">
+                        </div>
+                    </div>
+                    <img id="box" src="img/index/box.png" style="position: absolute; top: 292px;">
+                    <img id="btnNext" data-btntype="ui" src="img/index/btnNext.png" style="position: absolute; top: 600px; display: none;">
+                </div>
+                <!-- btn area -->
+            </div>
+            <!-- UI Image Area ---------------------------------------------------------------------------------------------------------------->
+            <div id="ui" style="position: absolute">
+                <img id="btnBack" src="img/common/btn_back.png" class="btn-ui-action" data-btntype="ui" style="margin-left: 10px; margin-top: 10px" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

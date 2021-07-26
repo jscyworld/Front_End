@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>rewardGame</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no" />
+    <script type="text/javascript" src="js/common/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/common/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/common/mobile-detect.js"></script>
+    <script type="text/javascript" src="js/common/KYC_ActionList.js"></script>
+    <script type="text/javascript" src="js/common/KYC_CallScript.js"></script>
+    <script type="text/javascript" src="js/common/KYC_DefaultScript.js"></script>
+    <script type="text/javascript" src="js/common/KYC_SoundScript.js"></script>
+    <script type="text/javascript" src="js/common/lottie.js"></script>
+    <script type="text/javascript" src="js/Contents_Common.js"></script>
+    <script type="text/javascript" src="js/Contents_index.js"></script>
+    <link href="css/Contents_Common.css" type="text/css" rel="stylesheet" />
+    <link href="css/Contents_Action.css" type="text/css" rel="stylesheet" />
+    <link href="css/rewardGameStyle.css" type="text/css" rel="stylesheet" />
+    <style>
+        .contentsArea {
+            position: absolute;
+            width: 1674px;
+            height: 768px;
+        }
+    </style>
+</head>
+
+<body oncontextmenu="return false">
+    <div id="container" class="top-layer" style="background-color: #b8e5f4">
+        <div id="stage">
+            <div id="contents" class="flexH flexV">
+                <div class="contentsArea flexH flexV">
+                    <img src="img/index/bg.png">
+                    <img id="machine" data-seq="3" data-fps="100" src="img/index/machine_1.png" style="position: absolute; top: -360px;">
+                    <img id="bgFront" data-seq="2" data-fps="100" src="img/index/bgFront_1.png" style="position: absolute; bottom: 0px;">
+                    <img id="btnStart" class="selectObj" data-btntype="contents" src="img/index/btnStart.png"
+                        style="position: absolute; bottom: 0px; right: 320px;">
+                    <img id="btnPick" class="selectObj" data-btntype="contents" src="img/index/btnPick.png"
+                        style="position: absolute; bottom: 0px; right: 320px; display: none;">
+                    <img id="minusOne" src="img/index/minusOne.png" style="position: absolute; bottom: 175px; right: 435px; display: none;">
+                </div>
+                <!-- btn area -->
+                <img src="img/index/remainGameImg.png" style="position: absolute; top: 25px; right: 360px;">
+                <img src="img/index/iconX.png" style="position: absolute; top: 45px; right: 330px;">
+                <div id="gameCount" style="position: absolute; top: 42px; right: 280px;" class="gameCount"></div>
+                <img id="bgDim" src="img/index/bgDim.png" style="position: absolute; display: none;">
+                <div id="noTicketDiv" class="flexH flexV" style="position: absolute; width: 100%; height: 100%; display: none;">
+                    <img src="img/index/noTicketText.png" style="position: absolute;">
+                    <img id="btnConfirm" data-btntype="ui" src="img/index/btnConfirm.png" style="position: absolute; top: 509px;">
+                </div>
+                <div id="capsule" style="position: absolute; display: none;"></div>
+                <div id="collectionDiv" class="flexH flexV" style="position: absolute; top: 40px; display: none;">
+                    <img id="effectLight" src="img/index/effectLight.png">
+                    <div id="card" class="flip-card" style="position: absolute;">
+                        <div class="flip-card-inner flexH flexV flexC">
+                            <div class="flip-card-back">
+                                <img src="img/index/cardBack.png">
+                            </div>
+                            <div id="cardFrontDiv" class="flip-card-front">
+                                <img id="cardFront" src="img/index/cardFront.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img id="textGreat" src="img/index/textGreat.png" style="position: absolute; top: -300px;">
+                <img id="textNewCard" src="img/index/newWordEarned.png" style="position: absolute; top: 800px;">
+                <div id="earnMileageDiv" class="flexH flexV"
+                    style="position: absolute; width: 200px; height: 60px; top: 150px; justify-content: space-evenly; display: none;">
+                    <img src="img/index/iconPlus.png">
+                    <div id="earnMileage" class="earnMileage"></div>
+                </div>
+                <div id="myMileageBox" class="myMileageBox flexH flexV">
+                    <img src="img/index/myStarMileage.png" style="position: absolute; top: 50px;">
+                    <img src="img/index/mileageIcon_big.png" style="position: absolute; top: 140px; left: 80px;">
+                    <div id="myMileageTxt" class="myMileageTxt">0</div>
+                </div>
+                <div id="btnDiv" class="flexH flexV"
+                    style="position: absolute; width: 590px; height: 129px; top: 800px; justify-content: space-evenly;">
+                    <img id="btnStop" data-btntype="ui" src="img/index/btnStop.png">
+                    <img id="btnPlay" data-btntype="ui" src="img/index/btnPlay.png">
+                </div>
+            </div>
+            <!-- UI Image Area ---------------------------------------------------------------------------------------------------------------->
+            <div id="ui" style="position: absolute">
+                <img id="btnBack" src="img/common/btn_back.png" class="btn-ui-action" data-btntype="ui" style="margin-left: 10px; margin-top: 10px" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

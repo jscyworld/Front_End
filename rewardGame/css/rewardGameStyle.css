@@ -1,0 +1,139 @@
+.cardRolling {
+    animation: cardRolling 0.2s linear infinite;
+}
+@keyframes cardRolling {
+    from {
+        transform: rotateY(0);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.cardBounce {
+    animation: cardBounce 0.3s cubic-bezier(0.29, -0.17, 0.73, 1.24) forwards;
+}
+@keyframes cardBounce {
+    from {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1.3);
+        filter: brightness(4);
+    }
+    to {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+}
+
+.effectLight {
+    animation: effectLight 2s linear infinite;
+}
+@keyframes effectLight {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.gameCount {
+    width: 43px;
+    height: 37px;
+    text-align: left;
+    font: normal normal normal 35px/42px KAKAOFRIENDS;
+    letter-spacing: 0px;
+    color: #ffffd4;
+    opacity: 1;
+}
+
+.earnMileage {
+    height: 51px;
+    text-align: left;
+    font: normal normal normal 56px/56px KAKAOFRIENDS;
+    letter-spacing: 0px;
+    color: #ffe34a;
+    opacity: 1;
+}
+
+.accMileage {
+    width: 264px;
+    height: 76px;
+    text-align: center;
+    font: normal normal bold 72px/116px KAKAOFRIENDS;
+    letter-spacing: 0px;
+    color: #ffe34a;
+    opacity: 1;
+}
+
+.mileageMotion {
+    animation: mileageMotion 1s linear forwards;
+}
+@keyframes mileageMotion {
+    from {
+        transform: translate(0, 30px);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(0, 0px);
+        opacity: 1;
+    }
+    to {
+        transform: translate(0, -30px);
+        opacity: 0;
+    }
+}
+
+.myMileageBox {
+    position: absolute;
+    top: 230px;
+    right: -100%;
+    width: 555px;
+    height: 266px;
+    border-radius: 30px;
+}
+
+.myMileageTxt {
+    position: absolute;
+    top: 105px;
+    left: 190px;
+    width: 392px;
+    height: 101px;
+    text-align: left;
+    font: normal normal normal 96px/163px KAKAOFRIENDS;
+    letter-spacing: 0px;
+    color: #ffe34a;
+    opacity: 1;
+}
+
+.scaleUp {
+    animation: scaleUp 0.5s ease-in-out forwards;
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.selectObj {
+    animation: selectObj 1s linear infinite;
+}
+@keyframes selectObj {
+    from,
+    to {
+        filter: brightness(1);
+        transform: scale(1);
+    }
+    50% {
+        filter: brightness(1.5);
+        transform: scale(1.05);
+    }
+}
